@@ -51,6 +51,7 @@ data "template_file" "ert" {
     packages_bucket_arn   = "${aws_s3_bucket.packages_bucket.arn}"
     resources_bucket_arn  = "${aws_s3_bucket.resources_bucket.arn}"
     kms_key_arn           = "${aws_kms_key.blobstore_kms_key.arn}"
+    iam_role_arn          = "${aws_iam_role.pas_bucket_access.arn}"
   }
 }
 
